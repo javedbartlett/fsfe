@@ -1,0 +1,15 @@
+{
+  "name": "fsfe",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "g": "^2.0.1",
+    "pm2": "^5.3.1"
+  }
+}
