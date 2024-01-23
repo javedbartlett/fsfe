@@ -1,10 +1,14 @@
-const http = require("http");
+const express = require("express");
+const server = require("http").createServer();
+
+const app = express();
 const PORT = 3001;
 
-const server = http.createServer(function(req, res) {
-	res.writeHead(200);
-	res.write("You just got Litt up!");
-	res.end();
-});
 
-server.listen(PORT, () => console.log(`Javed's server started on port ${PORT}`));
+app.get('/', (req, res) => {
+    res.send("you just got Litt up!", 200);
+})
+
+server.on('request', app);
+
+server.listen(PORT, () => console.log(`Now listening on port ${PORT} on this Express server....`));
